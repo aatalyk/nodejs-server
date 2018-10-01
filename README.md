@@ -15,9 +15,11 @@ https://node-postgres.com/features/connecting
 
 ## Handle index.js changes
 
+```javascript
 pm2 stop index.js
 pm2 start index.js
 pm2 startup
 sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemv -u ec2-user --hp /home/ec2-user
 pm2 save
 sudo service nginx restart
+```
